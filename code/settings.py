@@ -2,7 +2,7 @@ WIDTH = 1280
 HEIGHT = 720
 FPS = 60
 TILESIZE = 64
-BASEDIR = '/Users/fitz/CODE/Python/Zelda-like/'
+BASEDIR = 'D:\\CODE\\Python\\Zelda-like\\Zelda-like\\'
 
 
 weapon_data = {
