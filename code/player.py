@@ -17,7 +17,6 @@ class Player(pygame.sprite.Sprite):
 
 		# vector for player movement direction
 		self.direction = pygame.math.Vector2()
-		self.speed = 5
 		self.obstacle_sprites = obstacle_sprites
 		
 		# movement
@@ -33,6 +32,16 @@ class Player(pygame.sprite.Sprite):
 		self.can_switch_weapon = True
 		self.weapon_switch_time = None
 		self.switch_duration_cooldown = 200 
+
+		# player
+		# dictionary of player max stats
+		self.stats = {'health': 100, 'energy': 60, 'attack': 10, 'magic': 4, 'speed': 5}
+		# individual values for current stats
+		self.health = self.stats['health']
+		self.energy = self.stats['energy']
+		self.speed = self.stats['speed']
+		self.exp = 123
+		
 	def get_status(self):
 
 		if self.direction.x == 0 and self.direction.y == 0:
