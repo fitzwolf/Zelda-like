@@ -1,6 +1,9 @@
-import pygame, sys
-from settings import *
+import sys
+
+import pygame
+
 from level import Level
+from settings import *
 
 
 class Game:
@@ -10,7 +13,7 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Zelda")
         self.clock = pygame.time.Clock()
-        
+
         self.level = Level()
 
     def run(self):
@@ -19,13 +22,13 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
-                
-            self.screen.fill('black')
+
+            self.screen.fill("black")
             self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     game = Game()
     game.run()
